@@ -486,8 +486,14 @@
           ></textarea>
           </div>
           <div class="modal-filed">
-            <input type="checkbox" id="Policy" name="Policy" value="true" class="modal-check">
-            <label for="Policy" class="modal-check-text">I accept the terms and conditions of the  <a href="" class="modal-check-link ">Privacy Policy</a></label>
+            <input type="checkbox" id="Policy" name="Policy" value="true" class="modal-check visually-hidden">
+            <label for="Policy" class="modal-check-text">
+            <span>
+              <svg class="modal-check-ico" width="10" height="8">
+                <use href="./images/icons.svg#icon-Vector"></use>
+              </svg>
+            </span> 
+              I accept the terms and conditions of the &nbsp;<a href="" class="modal-check-link ">Privacy Policy</a></label>
           </div>
           <button type="submit" class="modal-btn button">Send</button>
         </form>

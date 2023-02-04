@@ -44,6 +44,18 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path:inset(100%) ;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -613,14 +625,26 @@ line-height: 1.33;
 letter-spacing: 0.04em;
 color: #757575;
 display: flex;
+margin-bottom: 24px;
 }
-.modal-check-text::before{
-content: "";
-width: 16px;
-height: 16px;
-border: 1.25px solid var(--grey-two);
-border-radius: 2px;
-margin-right: 8px;
+
+.modal-check-text span{
+  display: flex;
+  align-items: center;
+justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--grey-two);
+  border-radius: 2px;
+  margin-right: 8px;
+  fill: transparent;
+  transition: var(--transition); 
+}
+.modal-check:checked + .modal-check-text span{
+  background: var(--blue-two);
+  border: 1.25px solid #404BBF;
+  border-radius: 2px; 
+  fill: var(--white-two);
 }
 .modal-btn {
   width: 169px;
